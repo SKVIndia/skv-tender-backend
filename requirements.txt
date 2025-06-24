@@ -6,3 +6,5 @@ sentence-transformers==2.2.2
 openpyxl==3.1.2
 Werkzeug==2.3.7
 python-dotenv==1.0.0
+setuptools==65.5.0
+wheel==0.40.0
