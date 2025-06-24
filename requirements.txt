@@ -6,4 +6,3 @@ sentence-transformers==2.2.2
 openpyxl==3.1.2
 Werkzeug==2.3.7
 python-dotenv==1.0.0
-gunicorn==21.2.0
