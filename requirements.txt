@@ -2,8 +2,8 @@ setuptools>=42
 wheel
 Flask==2.3.3
 Flask-CORS==4.0.0
-pandas==2.0.3 --only-binary :all:
-numpy==1.24.2 --only-binary :all:
-openpyxl
-sentence-transformers
-torch
+pandas==2.2.3
+numpy==1.26.4
+openpyxl==3.1.2
+sentence-transformers==2.2.2
+torch==2.3.0
