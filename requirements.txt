@@ -2,8 +2,8 @@ setuptools==65.5.0
 wheel==0.40.0
 Flask==2.3.3
 Flask-CORS==4.0.0
-pandas==2.0.3
-numpy==1.24.2
+pandas==2.0.3 --only-binary :all:
+numpy==1.24.2 --only-binary :all:
 sentence-transformers==2.2.2
 openpyxl==3.1.2
 Werkzeug==2.3.7
