@@ -7,4 +7,3 @@ services:
     pythonVersion: 3.10.13
     plan: free
     autoDeploy: true
-    pythonVersion: 3.10.13
