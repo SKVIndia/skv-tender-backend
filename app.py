@@ -6,9 +6,14 @@ from sentence_transformers import SentenceTransformer, util
 from openpyxl import Workbook
 from openpyxl.styles import PatternFill, Font
 from io import BytesIO
+import psutil
 
 app = Flask(__name__)
 CORS(app)
+
+# ✅ Load the lightweight model once
+model = SentenceTransformer('paraphrase-MiniLM-L3-v2')
+app.logger.info(f"RAM used at startup: {psutil.virtual_memory().used / (1024**2):.2f} MB")
 
 @app.route("/api/compare", methods=["POST"])
 def compare_files():
@@ -27,7 +32,6 @@ def compare_files():
         tender_brief.columns = ['Tender Brief', 'Value', 'Doc Name and Page Number']
         tender_brief = tender_brief.dropna()
 
-        model = SentenceTransformer('all-MiniLM-L6-v2')
         skv_embeddings = model.encode(skv_clauses['Clauses'].tolist(), convert_to_tensor=True)
         tender_embeddings = model.encode(tender_brief['Tender Brief'].tolist(), convert_to_tensor=True)
 
