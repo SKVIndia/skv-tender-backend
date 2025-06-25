@@ -7,3 +7,4 @@ huggingface-hub==0.10.1
 scikit-learn==1.7.0
 numpy==1.26.4
 gunicorn==21.2.0
+psutil==5.9.8
