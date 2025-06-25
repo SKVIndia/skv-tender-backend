@@ -1,9 +1,11 @@
 services:
   - type: web
     name: skv-tender-backend
-    env: python
+    runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    pythonVersion: 3.10.13
+    startCommand: gunicorn app:app
     plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
     autoDeploy: true
